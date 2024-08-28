@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #F2E3D0;
+    height: 100vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+}
+
+header {
+    box-shadow: 0 3px 5px black;
+    padding: 10px 0;
+    background-color: #5A332A;
+    /* display: flex;
+    justify-content: space-between;
+    background-color: #5A332A;
+    /* min-height: 6rem;
+    border: solid 0.2rem rgb(0, 0, 0);
+    max-width: 100%;
+    align-items: center;
+    height: 7rem; */ 
+}
+
+header a {
+    text-decoration: none;
+    padding: 1rem;
+    color: rgb(250, 245, 245);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 7rem; */
+    width: 100%;
+}
+
+header nav .colorennav {
+    color: rgb(224, 221, 221) !important;
+}
+
+header nav a {
+    text-decoration: none;
+    color: rgb(167, 164, 164);
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    /* flex-direction: row; */
+}
+
+header nav .logo h2 {
+    font-size: 3rem;
+    color: rgb(250, 245, 245);
+}
+
+header nav .logo img {
+    height: 12rem;
+    width: 12rem;
+    margin-right: 2rem;
+}
+header nav .logo2 img {
+    height: 4rem;
+    width: 4rem;
+    margin-right: 2rem;
+    margin-right: 0;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    font-size: 2rem;
+    align-items: center;
+    padding: 1rem;
+    list-style: none;
+    width: 100%;
+}
+header nav ul .nav-item .colorennav:hover {
+    color: rgb(250, 245, 245) !important;
+}
+header nav .logo2 img:hover {
+    color: rgb(250, 245, 245) !important;
+}
+
+header nav ul li {
+    display: flex;
+}
+
+header nav ul li:hover {
+    color: white;
+}
+header button {
+    background-color: rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
+}
+header button span {
+    background-color: rgb(128, 128, 128);
+    color: rgb(128, 128, 128);
+}
+#cuenta-carrito {
+    background-color: black;
+    border-radius: 100%;
+    display: inline-block;
+    width: 32px;
+    line-height: 27px;
+    aspect-ratio: 1;
+    text-align: center;
+
+}
+h3,
+p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: rgb(236, 127, 64);
+    color: rgb(10, 10, 10);
+    padding: 5px 10px;
+    border: unset;
+    border-radius: 5px;
+    cursor: pointer;
+}
+footer {
+    box-shadow: 0 3px 5px black;
+    background-color: #5A332A;
+    margin-top: auto;
+    /* display: flex;
+    align-items: center;
+    background-color: #5A332A;
+    min-height: 6rem;
+    max-width: 100%;
+    margin: 0;
+    bottom: 0;
+    margin-top: 10rem; */
+}
+
+footer nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+footer nav div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2rem;
+}
+
+footer nav div a {
+    display: flex;
+    align-items: center;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: rgb(212, 209, 209);
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+footer nav a:hover {
+    color: rgb(250, 245, 245);
+}
+
+footer nav a h2 {
+    font-size: 2.5rem;
+}
+
+footer svg {
+    display: flex;
+    height: 4rem;
+    width: 4rem;
+    padding-right: 1rem;
+}
+
+footer img {
+    height: 10rem;
+    width: 10rem;
+    padding-right: 1rem;
+}
+.escondido {
+    display: none;
+}
