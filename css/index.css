@@ -2,9 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     gap: 120px;
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 40px;
+    max-width: 1500px;
+    /* margin-left: 25rem; */
+    margin: 25rem;
 }
 .tarjeta-producto {
     max-width: 300px;

@@ -120,6 +120,15 @@ h3,
 p {
     margin: 5px 0;
 }
+h1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    
+    margin: auto;
+    margin-top: 10rem;
+    
+}
 
 button {
     background-color: rgb(236, 127, 64);
