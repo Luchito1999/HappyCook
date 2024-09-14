@@ -162,7 +162,6 @@ fetch("./productos.json")
                     <button>Agregar al carrito</button>
                 `;
                 contenedorCards.appendChild(nuevoProducto);
-
                 // Agregar funcionalidad al botón
                 nuevoProducto.getElementsByTagName("button")[0].addEventListener("click", () => {
                     agregarAlCarrito(producto);
