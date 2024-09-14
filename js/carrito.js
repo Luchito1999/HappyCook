@@ -1,5 +1,10 @@
 function agregarAlCarrito(producto) {
-    let memoria = JSON.parse(localStorage.getItem("mercaderia")) || [];
+    // Validar el producto antes de añadirlo
+    if (!producto.id || !producto.nombre || !producto.img || !producto.precio) {
+        console.error("Producto inválido:", producto);
+        return;
+    }
+    let memoria = JSON.parse(localStorage.getItem("data")) || [];
     let cuenta = 0;
 
     const indiceProducto = memoria.findIndex(item => item.id === producto.id);
@@ -14,14 +19,22 @@ function agregarAlCarrito(producto) {
         memoria[indiceProducto].cantidad++;
         cuenta = memoria[indiceProducto].cantidad;
     }
-
-    localStorage.setItem("mercaderia", JSON.stringify(memoria));
+    Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "El producto se agregó al carrito",
+        showConfirmButton: true,
+        timer: 1200
+    });
+    localStorage.setItem("data", JSON.stringify(memoria));
     actualizarNumeroCarrito();
     return cuenta;
-}
+};
+
+
 
 function restarAlCarrito(producto) {
-    let memoria = JSON.parse(localStorage.getItem("mercaderia")) || [];
+    let memoria = JSON.parse(localStorage.getItem("data")) || [];
     const indiceProducto = memoria.findIndex(item => item.id === producto.id);
 
     if (indiceProducto !== -1) {
@@ -32,8 +45,8 @@ function restarAlCarrito(producto) {
             // Decrementamos la cantidad
             memoria[indiceProducto].cantidad--;
         }
-
-        localStorage.setItem("mercaderia", JSON.stringify(memoria));
+        
+        localStorage.setItem("data", JSON.stringify(memoria));
         actualizarNumeroCarrito();
     }
 }
@@ -45,7 +58,7 @@ function getNuevoProductoParaMemoria(producto) {
 
 const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 function actualizarNumeroCarrito() {
-    const memoria = JSON.parse(localStorage.getItem("mercaderia")) || [];
+    const memoria = JSON.parse(localStorage.getItem("data")) || [];
     if (memoria && memoria.length > 0) {
     const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
     cuentaCarritoElement.innerText = cuenta;

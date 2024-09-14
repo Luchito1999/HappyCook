@@ -1,6 +1,6 @@
 #productos-container {
     padding: 20px;
-    width: 500px;
+    width: 400px;
     margin: auto;
 }
 
@@ -14,7 +14,8 @@
 }
 
 .tarjeta-producto img {
-    height: 100px;
+    height: 16rem;
+    width: 16rem;
     aspect-ratio: 1.5;
 }
 
@@ -34,15 +35,27 @@
 
 #totales p {
     margin: 10px 0; 
-    font-size: 1.5rem; 
+    font-size: 2.5rem; 
     text-align: center;
     color: #333; 
 }
 
 #totales span {
     font-weight: bold; 
-width: 100%;
+    width: 100%;
 }
 #carrito-vacio{
     text-align: center;
+    font-size: 2.5rem;
+}
+.cantidad {
+    font-size: 2rem;
+}
+#totales button {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 2px 6px;
+    border: unset;
+    border-radius: 6px;
+    cursor: pointer;
 }

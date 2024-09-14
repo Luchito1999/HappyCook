@@ -119,17 +119,58 @@
 
 const contenedorCards = document.getElementById("productos-container");
 
-function crearCardsProductos(mercaderia) {
-  mercaderia.forEach(producto => {
-    const nuevoProducto = document.createElement("div");
-    nuevoProducto.classList.add("tarjeta-producto");
-    nuevoProducto.innerHTML = `
-    <img src=${producto.img}>
-    <h3>${producto.nombre}</h3>
-    <p>${producto.precio}</p>
-    <button>Agregar al carrito</button>
-    `
-    contenedorCards.appendChild(nuevoProducto);
-    nuevoProducto.getElementsByTagName("button")[0].addEventListener("click", () => agregarAlCarrito(producto))
-  })};
-  crearCardsProductos(mercaderia);
+// fetch("./productos.json")
+//     .then((response) => response.json())
+//     .then((data) => { 
+//       crearCardsProductos(data); 
+//   })
+//   .catch((error) => {
+//       console.error("Error al obtener los productos:", error);
+//   });
+
+// function crearCardsProductos(data) {
+//     data.forEach(producto => {
+//         const nuevoProducto = document.createElement("div");
+//         nuevoProducto.classList.add("tarjeta-producto");
+//         nuevoProducto.innerHTML = `
+//             <img src="${producto.img}">
+//             <h3>${producto.nombre}</h3>
+//             <p>$${producto.precio} c/u</p>
+//             <button>Agregar al carrito</button>
+//         `;
+//         contenedorCards.appendChild(nuevoProducto);
+
+//         // Agregar funcionalidad al botón
+//         nuevoProducto.getElementsByTagName("button")[0].addEventListener("click", () => {
+//             agregarAlCarrito(producto);
+//         });
+//     });
+// }
+
+fetch("./productos.json")
+    .then(response => response.json())
+    .then(data => {
+        function crearCardsProductos(data) {
+            data.forEach(producto => {
+                const nuevoProducto = document.createElement("div");
+                nuevoProducto.classList.add("tarjeta-producto");
+                nuevoProducto.innerHTML = `
+                    <img src="${producto.img}" alt="${producto.nombre}">
+                    <h3>${producto.nombre}</h3>
+                    <p>$${producto.precio} c/u</p>
+                    <button>Agregar al carrito</button>
+                `;
+                contenedorCards.appendChild(nuevoProducto);
+
+                // Agregar funcionalidad al botón
+                nuevoProducto.getElementsByTagName("button")[0].addEventListener("click", () => {
+                    agregarAlCarrito(producto);
+                });
+            });
+        }
+
+        crearCardsProductos(data);
+    })
+    .catch(error => {
+        console.error("Error al obtener los productos:", error);
+    });

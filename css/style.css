@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+* {
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
 
 body {
     display: flex;
@@ -8,6 +14,7 @@ body {
     height: 100vh;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0;
+    position: relative;
 }
 
 header {
@@ -46,7 +53,7 @@ header nav a {
     text-decoration: none;
     color: rgb(167, 164, 164);
     padding: 2rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
@@ -58,13 +65,13 @@ header nav .logo {
 }
 
 header nav .logo h2 {
-    font-size: 3rem;
+    font-size: 4rem;
     color: rgb(250, 245, 245);
 }
 
 header nav .logo img {
-    height: 12rem;
-    width: 12rem;
+    height: 15rem;
+    width: 15rem;
     margin-right: 2rem;
 }
 header nav .logo2 img {
@@ -121,13 +128,15 @@ p {
     margin: 5px 0;
 }
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 3rem;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.60);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* color: rgb(236, 127, 64); */
+    color: rgb(216, 199, 199);
+    border-color: black;
+    font-size: 8rem;
     text-align: center;
-    
     margin: auto;
     margin-top: 10rem;
-    
 }
 
 button {
@@ -154,7 +163,7 @@ footer {
 
 footer nav {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -176,7 +185,7 @@ footer nav a {
     text-decoration: none;
     color: rgb(212, 209, 209);
     padding: 2rem;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     font-weight: 500;
 }
 
@@ -185,21 +194,52 @@ footer nav a:hover {
 }
 
 footer nav a h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 footer svg {
     display: flex;
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
     padding-right: 1rem;
 }
 
 footer img {
-    height: 10rem;
-    width: 10rem;
+    height: 12rem;
+    width: 12rem;
     padding-right: 1rem;
 }
 .escondido {
     display: none;
+}
+
+/* POP UP WHATSAPP*/
+
+.btn-wpp {
+    border-radius: 50%;
+    width: 6rem;
+    height: 6rem;
+    background-color: green; 
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 2rem; 
+    right: 3rem; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn-wpp a {
+    color: white;
+    text-decoration: none; 
+}
+svg {
+    width:  2.5rem; 
+    height: 2.5rem;
+}
+.btn-wpp:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
 }
