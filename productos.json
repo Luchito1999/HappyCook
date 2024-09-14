@@ -2,19 +2,19 @@
     {
         "id": 1,
         "nombre": "Medialuna",
-        "img": "/assets/medialuna3.jfif",
+        "img": "./assets/medialuna3.jfif",
         "precio": 600
     },
     {
         "id": 2,
         "nombre": "Churro",
-        "img": "/assets/churro3.jfif",
+        "img": "./assets/churro3.jfif",
         "precio": 500
     },
     {
         "id": 3,
         "nombre": "Berlinesa",
-        "img": "/assets/berlinesa.png",
+        "img": "./assets/berlinesa.png",
         "precio": 700
     },
     {
