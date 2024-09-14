@@ -62,17 +62,25 @@
 @media only screen and (max-width: 480px) {
     .tarjeta-producto {
         display: flex;
-        flex-direction: row;
-        max-width: 420px;
-        gap: 20px;
+        flex-direction: column;
+        padding: 4rem;
+        max-width: 250px;
+        gap: 4rem;
         align-items: center;
         justify-content: center;
     }
     
     .tarjeta-producto img {
-        height: 12rem;
-        width: 12rem;
+        height: 18rem;
+        width: 18rem;
         aspect-ratio: 1.5;
-        border-radius: 15%;
+        border-radius: 12%;
+    }
+    .tarjeta-producto h3 {
+        max-width: 250px;
+        font-size: 3rem;
+    }
+    .botones{
+        padding: 4rem;
     }
 }

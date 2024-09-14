@@ -18,8 +18,8 @@ function crearCardsProductos() {
                     nuevoProducto.innerHTML = `
                     <img src="${producto.img}">
                     <h3>${producto.nombre}</h3>
-                    <p>$${producto.precio}</p>
-                    <div>
+                    <p>$${producto.precio} c/u</p>
+                    <div class = "botones">
                         <button> + </button>
                         <span class="cantidad">${producto.cantidad}</span>
                         <button> - </button>
