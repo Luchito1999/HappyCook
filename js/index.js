@@ -150,6 +150,7 @@ const contenedorCards = document.getElementById("productos-container");
 fetch("./productos.json")
     .then(response => response.json())
     .then(data => {
+      console.log(data);
         function crearCardsProductos(data) {
             data.forEach(producto => {
                 const nuevoProducto = document.createElement("div");
